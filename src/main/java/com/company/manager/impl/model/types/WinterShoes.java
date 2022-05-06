@@ -7,7 +7,7 @@ import lombok.Getter;
 
 
 @Getter
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 public class WinterShoes extends ShoeInfo {
   private final Boolean isWaterResistant;
   private final Boolean isFur;

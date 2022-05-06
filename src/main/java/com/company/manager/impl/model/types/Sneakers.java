@@ -8,7 +8,7 @@ import lombok.Getter;
 
 
 @Getter
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 public class Sneakers extends ShoeInfo {
 
   private final Purpose purpose;

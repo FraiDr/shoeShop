@@ -7,7 +7,7 @@ import lombok.Getter;
 
 
 @Getter
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 public class Bumps extends ShoeInfo {
 
 
