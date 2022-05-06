@@ -1,20 +1,20 @@
 package com.company.manager.impl;
 
+import lombok.Getter;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 import com.company.manager.IShopManager;
-import com.company.model.ShoeInfo;
-import com.company.model.types.Assignment;
-
+import com.company.manager.impl.model.ShoeInfo;
+import com.company.manager.impl.model.types.Assignment;
+@Getter
 public class ShopManager implements IShopManager {
-  private Map<String, List<ShoeInfo>> shoesMap = new HashMap<>();
+  private final Map<String, List<ShoeInfo>> shoesMap = new HashMap<>();
 
-  private Comparator<ShoeInfo> priceComparator = (sh1, sh2) -> {
+  private final Comparator<ShoeInfo> priceComparator = (sh1, sh2) -> {
 
     if (sh1.getPriceInUah() > sh2.getPriceInUah()) {
       return 1;
@@ -23,7 +23,7 @@ public class ShopManager implements IShopManager {
     }
     return 0;
   };
-  private Comparator<ShoeInfo> sizeComparator = (sh1, sh2) -> {
+  private final Comparator<ShoeInfo> sizeComparator = (sh1, sh2) -> {
     if (sh1.getSize() > sh2.getSize()) {
       return 1;
     } else if (sh1.getSize() < sh2.getSize()) {
@@ -38,81 +38,48 @@ public class ShopManager implements IShopManager {
   public void addShoes(List<ShoeInfo> shoes) {
     shoes.forEach(shoe -> {
       String name = shoe.getBrand();
-      var existingShoes = shoesMap.get(name);
-      if (existingShoes == null) {
-        existingShoes = new LinkedList<ShoeInfo>();
-        shoesMap.put(name, existingShoes);
-      }
+      var existingShoes = shoesMap.computeIfAbsent(name, k -> new LinkedList<>());
       existingShoes.add(shoe);
     });
   }
-
-  @Override
-  public void printAsorty() {
-    shoesMap.forEach((brand, listo) -> {
-      System.out.println("brand=" + brand);
-      listo.forEach(shoe -> System.out.println(shoe.toString()));
-    });
-  };
-
   @Override
   public List<ShoeInfo> sortByPrice(int direction) {
     List<ShoeInfo> tempo = new LinkedList<>();
-
-    shoesMap.values().forEach(shoes -> {
-      shoes.forEach(shoe -> {
-        tempo.add(shoe);
-      });
-    });
-    Collections.sort(tempo, priceComparator);
+    shoesMap.values().forEach(tempo::addAll);
+    tempo.sort(priceComparator);
     if (direction == -1) {
       Collections.reverse(tempo);
-      return tempo;
-    } else
-      return tempo;
+    }
+    return tempo;
   }
-
   @Override
   public List<ShoeInfo> sortBySize(int direction) {
     List<ShoeInfo> tempo = new LinkedList<>();
 
-    shoesMap.values().forEach(shoes -> {
-      shoes.forEach(shoe -> {
-        tempo.add(shoe);
-      });
-    });
-    Collections.sort(tempo, sizeComparator);
+    shoesMap.values().forEach(tempo::addAll);
+    tempo.sort(sizeComparator);
     if (direction == -1) {
       Collections.reverse(tempo);
-      return tempo;
-    } else
-      return tempo;
+    }
+    return tempo;
   }
-
-
-
   @Override
   public List<ShoeInfo> searchBySize(final int size) {
     List<ShoeInfo> finded = new LinkedList<>();
     for (List<ShoeInfo> listo : shoesMap.values()) {
       finded.addAll(
-          listo.stream().filter(shoe -> shoe.getSize().equals(size)).collect(Collectors.toList()));
+              listo.stream().filter(shoe -> shoe.getSize().equals(size)).toList());
 
     }
     return finded;
   }
-
   @Override
   public List<ShoeInfo> searchByAssignment(Assignment assignment) {
     List<ShoeInfo> finded = new LinkedList<>();
     for (List<ShoeInfo> listo : shoesMap.values()) {
-      finded.addAll(listo.stream().filter(shoe -> shoe.getAssignment().equals(assignment))
-          .collect(Collectors.toList()));
+      finded.addAll(listo.stream().filter(shoe -> shoe.getAssignment().equals(assignment)).toList());
 
     }
     return finded;
   }
-
-
-
 }

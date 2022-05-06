@@ -1,21 +1,26 @@
-package com.company.model.types;
+package com.company.manager.impl.model.types;
 
-import com.company.model.Sex;
-import com.company.model.ShoeInfo;
+import com.company.manager.impl.model.Sex;
+import com.company.manager.impl.model.ShoeInfo;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 
+
+@Getter
+@EqualsAndHashCode
 public class Bumps extends ShoeInfo {
 
 
-  private Boolean isLacquered;
-  private String typeOfToeCap;
-  private String typeOfHeels;
-  private Assignment assignment;
+  private final Boolean isLacquered;
+  private final String typeOfToeCap;
+  private final String typeOfHeels;
+  private final Assignment assignment;
 
   public Bumps(String model, String brand, Sex sex, String material, String color, Integer size,
-      Integer priceInUah, Boolean haveHeels, Boolean isAvailable, Boolean correctiveInsole,
-      Boolean isLacquered, String typeOfToeCap, String typeOfHeels) {
+               Integer priceInUah, Boolean haveHeels, Boolean isAvailable, Boolean correctiveInsole,
+               Boolean isLacquered, String typeOfToeCap, String typeOfHeels) {
     super(model, brand, sex, material, color, size, priceInUah, haveHeels, isAvailable,
-        correctiveInsole);
+            correctiveInsole);
     this.isLacquered = isLacquered;
     this.typeOfToeCap = typeOfToeCap;
     this.typeOfHeels = typeOfHeels;
@@ -23,19 +28,12 @@ public class Bumps extends ShoeInfo {
   }
 
   @Override
-  public String toString() {
-    return "Bumps [isLacquered=" + isLacquered + ", typeOfToeCap=" + typeOfToeCap + ", typeOfHeels="
-        + typeOfHeels + ", assignment=" + assignment + "," + super.toString() + "]";
+  public String getHeaders() {
+    return super.getHeaders()+",isLacquered"+",typeOfToeCap"+",typeOfHeels"+",assignment";
   }
 
-  public Assignment getAssignment() {
-    return assignment;
+  @Override
+  public String toCSV() {
+    return super.toCSV()+", " + getIsLacquered() +", " + getTypeOfToeCap() + ", " + getTypeOfHeels() +", " + getAssignment()   ;
   }
-
-  public void setAssignment(Assignment assignment) {
-    this.assignment = assignment;
-  }
-
-
-
 }

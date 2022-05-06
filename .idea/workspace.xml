@@ -1,20 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d2da23b-def2-4d01-a647-a9925034ca32" name="Changes" comment="" />
+    <list default="true" id="1d2da23b-def2-4d01-a647-a9925034ca32" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/manager/IShopManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/manager/IShopManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/ShopManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/ShopManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/Writer/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/Writer/Writer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/Sex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/Sex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/ShoeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/ShoeInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/types/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/types/Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/types/Bumps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/types/Bumps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/types/Purpose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/types/Purpose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/types/Sneakers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/types/Sneakers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/types/WinterShoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/manager/impl/model/types/WinterShoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/manager/impl/ShopManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/manager/impl/ShopManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/manager/impl/Writer/WriterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/manager/impl/Writer/WriterTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="28cWyqD53xvtusTNYFjqAKQK7ma" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/acc2/IdeaProjects/shoeShop",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\acc2\IdeaProjects\shoeShop\src\main\java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.company.manager.impl.Writer" />
+      <recent name="com.company.manager.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.WriterTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="shoeShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopManagerTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="shoeShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.manager.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.company.manager.impl.ShopManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WriterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shoeShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.manager.impl.Writer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.manager.impl.Writer" />
+      <option name="MAIN_CLASS_NAME" value="com.company.manager.impl.Writer.WriterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.WriterTest" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -25,5 +139,31 @@
       <updated>1651516619704</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/shoeShop$ShopManagerTest.ic" NAME="ShopManagerTest Coverage Results" MODIFIED="1651669817633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/shoeShop$WriterTest.ic" NAME="WriterTest Coverage Results" MODIFIED="1651672315832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.manager.impl.Writer.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/shoeShop$Main.ic" NAME="Main Coverage Results" MODIFIED="1651578471662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.*</FILTER>
+    </SUITE>
   </component>
 </project>

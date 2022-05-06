@@ -1,8 +1,8 @@
 package com.company.manager;
 
 import java.util.List;
-import com.company.model.ShoeInfo;
-import com.company.model.types.Assignment;
+import com.company.manager.impl.model.ShoeInfo;
+import com.company.manager.impl.model.types.Assignment;
 
 public interface IShopManager {
   List<ShoeInfo> sortByPrice(final int direction);
@@ -15,5 +15,6 @@ public interface IShopManager {
 
   void addShoes(List<ShoeInfo> shoes);
 
-  void printAsorty();
+
+
 }

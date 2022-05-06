@@ -1,131 +1,36 @@
-package com.company.model;
+package com.company.manager.impl.model;
 
-import com.company.model.types.Assignment;
+import com.company.manager.impl.model.types.Assignment;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 
+
+@Getter
+@AllArgsConstructor
+@EqualsAndHashCode
 public abstract class ShoeInfo {
-  private String model;
+  private final String model;
+  private final String brand;
+  private final Sex sex;
+  private final String material;
+  private final String color;
+  private final Integer size;
+  private final int priceInUah;
+  private final Boolean haveHeels;
+  private final Boolean isAvailable;
+  private final Boolean correctiveInsole;
+  private final Assignment assignment=null;
 
-
-  private String brand;
-  private Sex sex;
-  private String material;
-  private String color;
-  private Integer size;
-  private int priceInUah;
-  private Boolean haveHeels;
-  private Boolean isAvailable;
-  private Boolean correctiveInsole;
-  private Assignment assignment;
-
-  public ShoeInfo(String model, String brand, Sex sex, String material, String color, Integer size,
-      Integer priceInUah, Boolean haveHeels, Boolean isAvailable, Boolean correctiveInsole) {
-    this.model = model;
-    this.brand = brand;
-    this.sex = sex;
-    this.material = material;
-    this.color = color;
-    this.size = size;
-    this.priceInUah = priceInUah;
-    this.haveHeels = haveHeels;
-    this.isAvailable = isAvailable;
-    this.correctiveInsole = correctiveInsole;
-    this.assignment = null;
+  public String getHeaders() {
+    return  "model," + "brand  ," + "sex ," + "material ," + "color,"+"size,"+"priceInUah,"+"haveHeels,"+"isAvailable,"+"correctiveInsole,"+"assignment,";
+  }
+  public String toCSV() {
+    return getModel() + ", " + getBrand() + ", " +  getSex() + ", " + getMaterial()+", " + getColor()+", " + getSize()+", " + getPriceInUah() + ", "+ getHaveHeels()+", "+ getIsAvailable()+", "+ getCorrectiveInsole()+", " + getAssignment();
   }
 
-  public Assignment getAssignment() {
-    return assignment;
-  }
 
-  public void setAssignment(Assignment assignment) {
-    this.assignment = assignment;
-  }
 
-  public String getModel() {
-    return model;
-  }
-
-  public void setModel(String model) {
-    this.model = model;
-  }
-
-  public String getBrand() {
-    return brand;
-  }
-
-  public void setBrand(String brand) {
-    this.brand = brand;
-  }
-
-  public Sex getSex() {
-    return sex;
-  }
-
-  public void setSex(Sex sex) {
-    this.sex = sex;
-  }
-
-  public String getMaterial() {
-    return material;
-  }
-
-  public void setMaterial(String material) {
-    this.material = material;
-  }
-
-  public String getColor() {
-    return color;
-  }
-
-  public void setColor(String color) {
-    this.color = color;
-  }
-
-  public Integer getSize() {
-    return size;
-  }
-
-  public void setSize(Integer size) {
-    this.size = size;
-  }
-
-  public Integer getPriceInUah() {
-    return priceInUah;
-  }
-
-  public void setPriceInUah(Integer priceInUah) {
-    this.priceInUah = priceInUah;
-  }
-
-  public Boolean getHaveHeels() {
-    return haveHeels;
-  }
-
-  public void setHaveHeels(Boolean haveHeels) {
-    this.haveHeels = haveHeels;
-  }
-
-  public Boolean getIsAvailable() {
-    return isAvailable;
-  }
-
-  public void setIsAvailable(Boolean isAvailable) {
-    this.isAvailable = isAvailable;
-  }
-
-  public Boolean getCorrectiveInsole() {
-    return correctiveInsole;
-  }
-
-  public void setCorrectiveInsole(Boolean correctiveInsole) {
-    this.correctiveInsole = correctiveInsole;
-  }
-
-  @Override
-  public String toString() {
-    return "model=" + model + ", brand=" + brand + ", sex=" + sex + ", material=" + material
-        + ", color=" + color + ", size=" + size + ", priceInUah=" + priceInUah + ", haveHeels="
-        + haveHeels + ", isAvailable=" + isAvailable + ", correctiveInsole=" + correctiveInsole;
-  }
 
 
 
