@@ -1,0 +1,12 @@
+Sneakers:
+model,brand  ,sex ,material ,color,size,priceInUah,haveHeels,isAvailable,correctiveInsole,assignment,,purposeisNetting,assignment
+Nike,AirForce, Nike, unisex, leather, white, 43, 3400, false, true, false, Sneakers,forSoccer,false,Sneakers
+WinterShoes:
+model,brand  ,sex ,material ,color,size,priceInUah,haveHeels,isAvailable,correctiveInsole,assignment,isWaterResistantisFurassignment
+CAT,nzx1, CAT, male, leather, brown, 42, 3500, false, true, true, WinterShoes, true, true, WinterShoes
+Bumps:
+model,brand  ,sex ,material ,color,size,priceInUah,haveHeels,isAvailable,correctiveInsole,assignment,,isLacquered,typeOfToeCap,typeOfHeels,assignment
+GUCCI,Shaleniese, GUCCI, female, leather, black, 40, 2900, true, false, false, Bumps, true, triangle, bottier, Bumps
+Sneakers:
+model,brand  ,sex ,material ,color,size,priceInUah,haveHeels,isAvailable,correctiveInsole,assignment,,purposeisNetting,assignment
+Adidas,Superstar, Adidas, unisex, leather, green, 45, 3100, false, true, false, Sneakers,casual,false,Sneakers
