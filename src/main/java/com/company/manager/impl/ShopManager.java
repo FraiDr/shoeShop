@@ -1,18 +1,19 @@
 package com.company.manager.impl;
 
+import lombok.Data;
 import lombok.Getter;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+
+import java.util.*;
+
 import com.company.manager.IShopManager;
 import com.company.manager.impl.model.ShoeInfo;
 import com.company.manager.impl.model.types.Assignment;
+
+@Data
 @Getter
+
 public class ShopManager implements IShopManager {
-  private final Map<String, List<ShoeInfo>> shoesMap = new HashMap<>();
+  protected Map<String, List<ShoeInfo>> shoesMap= new HashMap<>();
 
   private final Comparator<ShoeInfo> priceComparator = (sh1, sh2) -> {
 
@@ -33,7 +34,6 @@ public class ShopManager implements IShopManager {
   };
 
 
-
   @Override
   public void addShoes(List<ShoeInfo> shoes) {
     shoes.forEach(shoe -> {
@@ -42,6 +42,7 @@ public class ShopManager implements IShopManager {
       existingShoes.add(shoe);
     });
   }
+
   @Override
   public List<ShoeInfo> sortByPrice(int direction) {
     List<ShoeInfo> tempo = new LinkedList<>();
@@ -52,6 +53,7 @@ public class ShopManager implements IShopManager {
     }
     return tempo;
   }
+
   @Override
   public List<ShoeInfo> sortBySize(int direction) {
     List<ShoeInfo> tempo = new LinkedList<>();
@@ -63,6 +65,7 @@ public class ShopManager implements IShopManager {
     }
     return tempo;
   }
+
   @Override
   public List<ShoeInfo> searchBySize(final int size) {
     List<ShoeInfo> finded = new LinkedList<>();
@@ -73,6 +76,7 @@ public class ShopManager implements IShopManager {
     }
     return finded;
   }
+
   @Override
   public List<ShoeInfo> searchByAssignment(Assignment assignment) {
     List<ShoeInfo> finded = new LinkedList<>();
@@ -81,5 +85,11 @@ public class ShopManager implements IShopManager {
 
     }
     return finded;
+  }
+
+
+  public Map<String, List<ShoeInfo>> getShoesMap() {
+
+    return shoesMap;
   }
 }

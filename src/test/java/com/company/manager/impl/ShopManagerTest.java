@@ -16,13 +16,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ShopManagerTest {
-    final static ShopManager managerTest = new ShopManager();
+    private final static ShopManager managerTest = new ShopManager();
     List<ShoeInfo> asorty = new LinkedList<>();
-    final static WinterShoes shoes1 = new WinterShoes("nzx1", "CAT", Sex.male, "leather", "brown", 42, 3500,
+    private final static WinterShoes shoes1 = new WinterShoes("nzx1", "CAT", Sex.male, "leather", "brown", 42, 3500,
             false, true, true, true, true);
-    final static Sneakers trainers = new Sneakers("AirForce", "Nike", Sex.unisex, "leather", "white", 43, 3400,
+    private final static Sneakers trainers = new Sneakers("AirForce", "Nike", Sex.unisex, "leather", "white", 43, 3400,
             false, true, false, Purpose.forSoccer, false);
-    final static Bumps bumps1 = new Bumps("Shaleniese", "GUCCI", Sex.female, "leather", "black", 40, 2900, true,
+    private final static Bumps bumps1 = new Bumps("Shaleniese", "GUCCI", Sex.female, "leather", "black", 40, 2900, true,
             false, false, true, "triangle", "bottier");
 
     @org.junit.jupiter.api.BeforeEach

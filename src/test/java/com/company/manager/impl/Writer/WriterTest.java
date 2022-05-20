@@ -8,16 +8,15 @@ import com.company.manager.impl.model.types.Purpose;
 import com.company.manager.impl.model.types.Sneakers;
 import com.company.manager.impl.model.types.WinterShoes;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.Scanner;
 
 class WriterTest {
-
-    @BeforeEach
-    void setUp() throws IOException {
+    @Test
+    void writeCSV() throws IOException {
         final ShopManager managerTest = new ShopManager();
 
         final WinterShoes shoes1 = new WinterShoes("nzx1", "CAT", Sex.male, "leather", "brown", 42, 3500,
@@ -31,18 +30,17 @@ class WriterTest {
         var asorty=(Arrays.asList(bumps1,trainers,shoes1,trainers2));
         managerTest.addShoes(asorty);
         Writer.writeCSV(managerTest.getShoesMap());
-    }
-
-    @Test
-    void writeCSV() throws IOException {
         try(FileReader expectedReader = new FileReader(new File("src//test//resources//", "expected.csv"));
             FileReader actualReader = new FileReader(new File("src//main//resources//", "results.csv"));
             BufferedReader expectedBufferReader = new BufferedReader(expectedReader);
-            BufferedReader actualBufferReader = new BufferedReader(actualReader) ){
+            BufferedReader actualBufferReader = new BufferedReader(actualReader)){
             String line;
+            Scanner scanner = new Scanner(actualReader);
             while ((line = expectedBufferReader.readLine()) != null) {
                 Assertions.assertEquals(line, actualBufferReader.readLine());
+
             }
+            Assertions.assertFalse(scanner.hasNextLine());
         }
     }
     }

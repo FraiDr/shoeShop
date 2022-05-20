@@ -4,14 +4,19 @@ package com.company.manager.impl.Writer;
 import com.company.manager.impl.model.ShoeInfo;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+//"src//main//resources//"+"results.csv"
 public class Writer {
-    public static void writeCSV(Map<String, List<ShoeInfo>> shoes) throws IOException {
-        try (FileWriter writer = new FileWriter("src//main//resources//"+"results.csv")){
+    public static void writeCSV(Map<String, List<ShoeInfo>> shoes)
+
+    {
+        File file = new File("src//main//resources//"+"results.csv");
+        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8)){
             Map<String, List<ShoeInfo>> shoesSorted = shoes.entrySet().stream()
                     .sorted((o1, o2) ->
                             CharSequence.compare(o1.getKey().getClass().getSimpleName(), o2.getKey().getClass().getSimpleName()))
@@ -45,10 +50,10 @@ public class Writer {
 
                 writer.write("\r\n");
             }
-        }
-        catch (IOException e) {
-            e.getMessage();
-            }
+        } catch (IOException e)
+        {
+            System.out.println(e.getMessage());
         }
     }
+}
 
